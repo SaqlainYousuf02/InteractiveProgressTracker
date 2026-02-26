@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Progress Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white overflow-x-hidden relative">
+    <!-- Animated Background -->
+    <div class="floating-orb w-96 h-96 bg-purple-500 top-0 left-0"></div>
+    <div class="floating-orb w-80 h-80 bg-blue-500 bottom-0 right-0" style="animation-delay: -5s;"></div>
+    <div class="floating-orb w-64 h-64 bg-pink-500 top-1/2 left-1/2" style="animation-delay: -10s;"></div>
+
+    <div class="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="inline-block mb-4 relative">
+                <div class="pulse-ring w-20 h-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
+                Learning Dashboard
+            </h1>
+          
+        </header>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="stats-card glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-transform">
+                <div class="text-4xl font-bold mb-1" id="totalCourses">0</div>
+                <div class="text-white/60 text-sm uppercase tracking-wider">Active Courses</div>
+            </div>
+            <div class="stats-card glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-transform">
+                <div class="text-4xl font-bold mb-1 text-emerald-400" id="completedLessons">0</div>
+                <div class="text-white/60 text-sm uppercase tracking-wider">Lessons Completed</div>
+            </div>
+            <div class="stats-card glass-panel rounded-2xl p-6 text-center transform hover:scale-105 transition-transform">
+                <div class="text-4xl font-bold mb-1 text-amber-400" id="avgProgress">0%</div>
+                <div class="text-white/60 text-sm uppercase tracking-wider">Average Progress</div>
+            </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div id="courseContainer" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+       
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/ProgressBar.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
